@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:300,400,700|Modak&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kanit:300,400,700&display=swap');
+
+body{
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding:  0;
+    background: #ffffff;
+}
+
+.container {
+    width: 1300px;
+    margin: 0 auto;
+}
+
+#menubar{
+    width: 100%;
+    height: 50px;
+    background: #333;
+    box-shadow: 0 0 10px #666;
+    padding: 0;
+
+}
+
+#logo {
+    float: left;
+}
+
+#menu {
+    float: right;
+}
+
+#menubar h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+    padding: 10px;
+}
+
+#menubar  a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: block;
+    transition: .3s;
+}
+
+#menu ul {
+    list-style: none;
+    background: #333;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    font-size: 0.8em;
+    line-height: 40px;
+    text-align: right;
+}
+
+#menu a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #888;
+    transition: .3s;
+}
+
+#menu a:hover {
+    background-color: #f8fafa;
+    color: rgb(12, 12, 12);
+}
+
+#menu li li {
+    font-size: .85em;
+}
+
+@media screen and (min-width: 860px) {
+    #menu li {
+        width:150px;
+        border-bottom: none;
+        height: 20px;
+        line-height: 50px;
+        font-size: 1em;
+        display: inline-block;
+        margin-right: -4px;
+    }
+
+    #menu #search {
+        width:50px;
+        border-bottom: none;
+        height: 20px;
+        line-height: 50px;
+        font-size: 1em;
+        display: inline-block;
+        margin-right: -4px; 
+    }
+
+    #menu #Cart {
+        width:60px;
+        border-bottom: none;
+        height: 20px;
+        line-height: 50px;
+        font-size: 1em;
+        display: inline-block;
+        margin-right: -4px; 
+    }
+
+    #menu a {
+        border-bottom: none;
+    }
+
+    #menu > ul > li {
+        text-align: center;
+    }
+
+    #menu li ul > li {
+        text-align: center;
+    }
+    #menu li ul {
+        position: absolute;
+        display: none;
+        width: inherit;
+    }
+    #menu li:hover ul{
+        display: block;
+    }
+    #menu li:hover .dropdown-content {
+        display: block;
+    }
+}
+
+/* <!-- ===========================================end menubar======================================================= --> */
+
+.dropdown-content {
+    height: 55px;
+}
+
+.dropdown-content input {
+    margin: 10px 0;
+    border: 2px solid #333;
+    width: 1025px;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.dropdown-content button {
+    margin-bottom: 0px;
+    padding: 5px;
+    width: 150px;
+    background: #333;
+    color: #fff;
+    /* border: 2px solid transparent rgb(255, 255, 255); */
+    border: 2px solid rgb(255, 255, 255);
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.dropdown-content button:hover {
+    background: #fff;
+    color: #333;
+    border: 2px solid #333;
+}
+
+.dropdown-content a {
+    color: rgb(104, 103, 103);
+    transition: .3s;
+}
+
+.dropdown-content a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    width: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+ 
+
+/* ================================================end search============================================================ */
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/* =========================================================================================================================================== */
+* button {
+    font-family: 'Kanit', sans-serif;
+    margin-bottom: 0px;
+    font-size: 20px;
+    padding: 5px;
+    width: auto;
+    background: #333;
+    color: #fff;
+    /* border: 2px solid transparent rgb(255, 255, 255); */
+    border: 2px solid rgb(216, 204, 204);
+    /* text-transform: uppercase; */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 20px;
+}
+* button:hover {
+    background: #fff;
+    color: #333;
+    border: 2px solid #333;
+}
+
+.content {
+    padding-top: 50px;
+}
+
+.content h1 {
+    font-size: 25px;
+    word-break: keep-all;
+}
+
+.content1 h1 {
+    font-size: 100px;
+    word-break: keep-all;
+}
+
+.content p {
+    font-size: 20px;
+}
+
+.container2 {
+    width: 98%;
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
+.flex-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-right: 0px;
+    grid-gap: 8rem;
+    background-color: rgb(238, 237, 237);
+    margin-top: 10px;
+    width: 100%;
+    height: 600px;
+    margin-bottom: 20px;
+}
+
+.flex {
+    background-color: #333;
+    width: 45%;
+    height: 100%;
+    float: left;
+}
+
+.flex img{
+    width: 90%;
+    height: 90%;
+    margin-left: 75%;
+    margin-top: 5%;
+    transition: all 0.3s;
+    transform: scale(1);
+    /* border-radius: 20px; */
+    border-radius: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.flex:hover img {
+    transform: scale(1.1);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-right: 0px;
+    grid-gap: 1rem;
+}
+
+.flex-container1 {
+    display: block;
+    background-color: rgb(252, 252, 252);
+}
+
+.flex1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-right: 0px;
+    grid-gap: 8rem;
+    height: 450px;
+    background-color: rgb(238, 237, 237);
+}
+
+.flex2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-right: 0px;
+    grid-gap: 8rem;
+    height: 450px;
+    margin-top: 20px;
+    background-color: rgb(238, 237, 237);
+}
+
+.flexin1 {
+    background-color: #333;
+    width: 70%;
+    height: 100%;
+    float: left;
+}
+
+.flexin1 img{
+    width: 90%;
+    height: 90%;
+    margin-left: 75%;
+    margin-top: 5%;
+    transition: all 0.3s;
+    transform: scale(1);
+    border-radius: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.flexin1:hover img {
+    transform: scale(1.1);
+}
+
+.flexin2 {
+    background-color: #333;
+    width: 70%;
+    height: 100%;
+    float: left;
+}
+
+.flexin2 img{
+    width: 90%;
+    height: 90%;
+    margin-left: 75%;
+    margin-top: 5%;
+    transition: all 0.3s;
+    transform: scale(1);
+    border-radius: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.flexin2:hover img {
+    transform: scale(1.1);
+}
+
+.flex-container2 {
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-right: 0px;
+    grid-gap: 1rem;
+    height: 920px;
+}
+
+.flex3 {
+    height: 100%;
+    background-color: rgb(238, 237, 237);
+}
+
+.flex3 h1 {
+    font-size: 25px;
+}
+
+.flex3 img{
+    margin-top: 40px;
+    margin-bottom: 50px;
+    width: 60%;
+    height: 50%px;
+    transition: all 0.3s;
+    transform: scale(1);
+    border-radius: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.flex3 img:hover {
+    transform: scale(1.1);
+}
+
+.flex3in1 {
+    background-color: #333;
+    width: 100%;
+    height: 20%;
+    float: left;
+}
+
+.flex4 {
+    height: 100%;
+    background-color: rgb(238, 237, 237);
+}
+
+.flex4 h1 {
+    font-size: 25px;
+}
+
+.flex4 img{
+    margin-top: 40px;
+    margin-bottom: 50px;
+    width: 60%;
+    height: 50%px;
+    transition: all 0.3s;
+    transform: scale(1);
+    border-radius: 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.flex4 img:hover {
+    transform: scale(1.1);
+}
+
+.info2 {
+    background-color: rgb(10, 10, 10);
+    margin-top: 10px;
+    width: 100%;
+    height: 980px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.info2 img {
+    float: left;
+    width: 60%;
+    height: 100%;
+}
+
+.info2 h1 {
+    font-family: 'Kanit', sans-serif;
+    margin-top: 280px;
+    margin-left: 8%;
+    font-size: 1000%;
+    float: left;
+    color: rgb(255, 254, 254);
+}
+
+.discount h2{
+    text-decoration: line-through;
+}
+
+.Price h2{
+    color: rgb(248, 9, 9);
+} 
+/* ==============================================================end content========================================================================== */
+
+footer {
+    background: #333;
+    color: rgb(252, 252, 252);
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    margin-top: 15px; 
+    padding-top: 40px;
+}
+
+
