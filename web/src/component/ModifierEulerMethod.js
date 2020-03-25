@@ -112,9 +112,9 @@ function ModifierEulerMethod(props)
         }
         console.log("diff : " + diff)
         var e = error(diff,ans)
-        // setAns(ans)
-        // setError(e)
-        // setReal(diff)
+        setAns(ans)
+        setError(e)
+        setReal(diff)
         console.log("error : " + e)  
         graph()
       }
